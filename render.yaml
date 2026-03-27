@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: trustbid-backend
+    runtime: node
+    rootDir: apps/backend
+    buildCommand: pnpm install
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: DATABASE_URL
+        sync: false      # Cargar manualmente desde el Dashboard Render conectando a Neon
+      - key: JWT_SECRET
+        sync: false      # Cargar manualmente desde el Dashboard Render
+      - key: FRONTEND_URL
+        sync: false      # Cargar URL de la App Nextjs
