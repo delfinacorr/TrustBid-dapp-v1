@@ -2,18 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 248, 249, 252;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+  body {
+    @apply bg-trust-black text-white antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    @apply tracking-tighter leading-[1.1];
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  )
-  rgb(var(--background-start-rgb));
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white to-white/40;
+  }
+  
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glow-blue {
+    @apply shadow-[0_0_50px_-12px_rgba(11,40,254,0.3)];
+  }
 }

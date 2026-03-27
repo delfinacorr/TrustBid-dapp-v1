@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "skills": {
+    "claude-automation-recommender": {
+      "source": "anthropics/claude-plugins-official",
+      "sourceType": "github",
+      "computedHash": "47e672bfcaa399d473cb33f2f298263d8554774314a71ef8761bd8d040351ceb"
+    },
+    "everything-claude-code-harness": {
+      "source": "aradotso/trending-skills",
+      "sourceType": "github",
+      "computedHash": "3eec2d94cbe2afcbdf2c31f4fdbba87de8515568b2877b6137e8781a7eb21f2c"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "supabase/agent-skills",
+      "sourceType": "github",
+      "computedHash": "9c87c315aed143ee3b34bec8117100f5035e0df09e6b23e1ecc772cff434c9ad"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "computedHash": "0a413bf988d06481f69bb81df2070741c3ba12dd9f1be2706d57f259c905992d"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "af9db85109491dbe11f36b13724835f0f03583a5e026bf496b3b257e27a3f753"
+    }
+  }
+}
