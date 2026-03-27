@@ -35,11 +35,11 @@ trustbid-dapp/
 # Install dependencies
 pnpm install
 
-# Start local blockchain
-pnpm --filter @trustbid/contracts node
+# Build Soroban contract
+cd packages/contracts && cargo build --target wasm32-unknown-unknown --release
 
-# Deploy contracts locally (in another terminal)
-pnpm --filter @trustbid/contracts deploy:local
+# Deploy to Stellar testnet
+cd packages/contracts && STELLAR_NETWORK=testnet STELLAR_SECRET_KEY=<key> ./scripts/deploy.sh
 
 # Start frontend
 pnpm --filter @trustbid/web dev
@@ -69,11 +69,12 @@ Automated agents live in `.agents/`. See [.agents/README.md](.agents/README.md) 
 
 | Layer | Tech |
 |-------|------|
-| Smart Contracts | Solidity 0.8.24, Hardhat, OpenZeppelin |
+| Smart Contracts | Rust, Soroban SDK, Stellar CLI |
+| Blockchain | Stellar (Soroban) |
 | Frontend | Next.js 14, React 18, Tailwind CSS |
-| Web3 | wagmi v2, viem, ethers v6 |
+| Web3 | stellar-sdk, PasskeyKit |
 | Build | Turborepo, pnpm workspaces |
-| Language | TypeScript |
+| Language | TypeScript + Rust |
 
 ## License
 
