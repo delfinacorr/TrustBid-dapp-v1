@@ -1,0 +1,10 @@
+{
+  "name": "@trustbid/docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'docs site — add your docs framework here'",
+    "build": "echo 'docs build'",
+    "clean": "rm -rf dist"
+  }
+}
