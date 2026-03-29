@@ -1,6 +1,6 @@
 # TrustBid dApp
 
-Decentralized auction platform built on Ethereum. Trustless, transparent, and permissionless.
+
 
 ## Monorepo Structure
 
@@ -15,7 +15,7 @@ trustbid-dapp/
 │   ├── web/                 # Next.js frontend (wagmi + viem)
 │   └── docs/                # Documentation site
 ├── packages/
-│   ├── contracts/           # Solidity smart contracts (Hardhat)
+│   ├── contracts/           # smart contracts (Hardhat)
 │   ├── ui/                  # Shared React component library
 │   ├── utils/               # Shared utilities (format, chain, validation)
 │   └── config/              # Shared ESLint + TypeScript config
